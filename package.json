@@ -1,6 +1,6 @@
 {
   "name": "solidjs-icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A solidjs icon pack",
   "main": "build/index.js",
   "files": [
@@ -12,7 +12,7 @@
   "scripts": {
     "install:icons": "./scripts/install.sh",
     "build:docs": "node scripts/build_docs.js",
-    "prepare": "node ./scripts/build.js"
+    "build": "node ./scripts/build.js"
   },
   "devDependencies": {
     "@teleology/fp": "^1.0.17",
