@@ -11,6 +11,7 @@
   "license": "MIT",
   "scripts": {
     "install:icons": "./scripts/install.sh",
+    "build:docs": "node scripts/build_docs.js",
     "prepare": "node ./scripts/build.js"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
     "feather-icons": "^4.28.0",
     "fs-extra": "^9.1.0",
     "glob": "^7.2.0",
+    "lodash.orderby": "^4.6.0",
     "material-design-icons": "^3.0.1",
     "pascalcase": "^1.0.0",
     "prettier": "^2.0.5",

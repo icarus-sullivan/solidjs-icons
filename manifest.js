@@ -2,6 +2,27 @@ module.exports = {
   output: 'build',
   packages: [
     {
+      id: 'ai',
+      name: 'Ant Design Icons',
+      url: 'https://github.com/ant-design/ant-design-icons',
+      license: 'MIT',
+      license_url: 'https://github.com/ant-design/ant-design-icons/blob/master/LICENSE',
+      files: [
+        {
+          pattern: 'node_modules/anticons/packages/icons-svg/svg/filled/*.svg',
+          formatter: (name) => `Fill-${name}`,
+        },
+        {
+          pattern: 'node_modules/anticons/packages/icons-svg/svg/outlined/*.svg',
+          formatter: (name) => `Outlined-${name}`,
+        },
+        {
+          pattern: 'node_modules/anticons/packages/icons-svg/svg/twotone/*.svg',
+          formatter: (name) => `TwoTone-${name}`,
+        },
+      ]
+    },
+    {
       id: 'di',
       name: 'Device Icons',
       url: 'https://github.com/vorillaz/devicons',

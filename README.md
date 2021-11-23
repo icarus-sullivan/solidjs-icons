@@ -17,17 +17,18 @@ import { FiX } from 'solidjs-icons/fi';
 
 | Name   | Path   | License |
 |--------|--------|---------|
+| Ant Design Icons | ai | MIT |
+| Bootstrap Icons | bs | MIT |
+| BoxIcons | bx | CC BY 4.0 License |
 | Device Icons | di | MIT |
+| Feather | fi | MIT |
 | Game Icons | gi | CC BY 3.0 |
 | Github Octicons | go | MIT |
+| IcoMoon Free | im | CC BY 4.0 License |
 | Ionicons 5 | io | MIT |
-| Bootstrap Icons | bs | MIT |
-| Feather | fi | MIT |
 | Material Design icons | md | Apache License Version 2.0 |
 | Simple Icons | si | CC0 1.0 Universal |
-| IcoMoon Free | im | CC BY 4.0 License |
 | Typeicons | ti | CC BY 4.0 License |
-| BoxIcons | bx | CC BY 4.0 License |
-| css.gg | cg | MIT |
 | VS Code Icons | vsc | CC BY 4.0 |
 | Weather Icons | wi | MIT |
+| css.gg | cg | MIT |

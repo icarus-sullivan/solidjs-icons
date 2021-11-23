@@ -17,6 +17,8 @@ function clone() {
   fi
 }
 
+clone anticons https://github.com/ant-design/ant-design-icons ;
+
 clone typeicons https://github.com/stephenhutchings/typicons.font.git ;
 
 clone githubicons https://github.com/primer/octicons.git ;
