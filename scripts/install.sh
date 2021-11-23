@@ -19,6 +19,8 @@ function clone() {
 
 clone anticons https://github.com/ant-design/ant-design-icons ;
 
+clone fontawesome https://github.com/FortAwesome/Font-Awesome.git ;
+
 clone typeicons https://github.com/stephenhutchings/typicons.font.git ;
 
 clone githubicons https://github.com/primer/octicons.git ;

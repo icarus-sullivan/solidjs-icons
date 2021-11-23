@@ -22,6 +22,7 @@ import { FiX } from 'solidjs-icons/fi';
 | BoxIcons | bx | CC BY 4.0 License |
 | Device Icons | di | MIT |
 | Feather | fi | MIT |
+| Font Awesome | fa | CC BY 4.0 License |
 | Game Icons | gi | CC BY 3.0 |
 | Github Octicons | go | MIT |
 | IcoMoon Free | im | CC BY 4.0 License |

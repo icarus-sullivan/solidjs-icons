@@ -23,6 +23,16 @@ module.exports = {
       ]
     },
     {
+      id: 'fa',
+      name: 'Font Awesome',
+      url: 'https://fontawesome.com/',
+      license: 'CC BY 4.0 License',
+      license_url: 'https://creativecommons.org/licenses/by/4.0/',
+      files: [
+        'node_modules/fontawesome/svgs/regular/*.svg'
+      ]
+    },
+    {
       id: 'di',
       name: 'Device Icons',
       url: 'https://github.com/vorillaz/devicons',
@@ -123,6 +133,7 @@ module.exports = {
       ],
       url: 'https://github.com/Keyamoon/IcoMoon-Free',
       license: 'CC BY 4.0 License',
+      license_url: 'https://creativecommons.org/licenses/by/4.0/',
     },
     {
       id: 'ti',
