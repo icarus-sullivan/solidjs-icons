@@ -1,6 +1,6 @@
 {
   "name": "solidjs-icons",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A solidjs icon pack",
   "main": "build/index.js",
   "files": [
