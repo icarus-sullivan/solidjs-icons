@@ -3,7 +3,7 @@ A svg-based icon packs for solidjs
 
 # Installation
 ```
-yarn add -D solidjs-icons
+yarn add solidjs-icons
 ```
 
 # Usage

@@ -3,7 +3,7 @@ A svg-based icon packs for solidjs
 
 # Installation
 ```
-yarn add -D solidjs-icons
+yarn add solidjs-icons
 ```
 
 # Usage
@@ -25,9 +25,11 @@ import { FiX } from 'solidjs-icons/fi';
 | Font Awesome | fa | CC BY 4.0 License |
 | Game Icons | gi | CC BY 3.0 |
 | Github Octicons | go | MIT |
-| IcoMoon Free | im | CC BY 4.0 License |
+| Hero Icons | hi | MIT |
+| IcoMoon | im | CC BY 4.0 License |
 | Ionicons 5 | io | MIT |
-| Material Design icons | md | Apache License Version 2.0 |
+| Material Design Icons | md | Apache License Version 2.0 |
+| Remix Icons | ri | Apache 2.0 |
 | Simple Icons | si | CC0 1.0 Universal |
 | Typeicons | ti | CC BY 4.0 License |
 | VS Code Icons | vsc | CC BY 4.0 |

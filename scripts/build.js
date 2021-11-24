@@ -5,30 +5,34 @@ const cheerio = require('./cheerio');
 const pascal = require('pascalcase');
 const glob = require('glob').sync;
 
-const iconTemplate = fs.readFileSync('./templates/icon.slim', 'utf8');
-const iconExportTemplate = fs.readFileSync('./templates/icon-export.slim', 'utf8');
-const packExportTemplate = fs.readFileSync('./templates/pack-export.slim', 'utf8');
-
 const { output, packages } = require('../manifest');
 
 const BUILD_DIR = path.resolve(process.cwd(), output);
+const ICON_TEMPLATE = `import { mergeProps } from "solid-js";
+
+export default (props) => (<svg {...mergeProps(props)} {{svg_attrs}}>{{svg_contents}}</svg>)`;
+const ICON_EXPORT_TEMPLATE = `export { default as {{name}} } from './{{name}}';`;
+const PACK_EXPORT_TEMPLATE = `export * from './{{id}}'`;
 
 const processIcon = ({ iconDir, name, file }) => {
   const contents = fs.readFileSync(file);
   const { svg_attrs, svg_contents } = cheerio(contents);
 
+  // santizied
+  const uncomment = svg_contents.replace(/<\!--.*?-->/gm, '')
+
   const outputFile = path.resolve(iconDir, `${name}.js`);
-  const output = slim(iconTemplate, { svg_attrs, svg_contents });
+  const output = slim(ICON_TEMPLATE, { svg_attrs, svg_contents: uncomment });
 
   fs.writeFileSync(outputFile, output, 'utf8');
 
-  return slim(iconExportTemplate, { name });
+  return slim(ICON_EXPORT_TEMPLATE, { name });
 }
 
 const parseFile = ({ id, file, formatter }) => {
   const { name } = path.parse(file);
 
-  const name1 = formatter ? formatter(name) : name;
+  const name1 = formatter ? formatter({ name, file }) : name;
   return {
     name: pascal(`${id}-${name1}`),
     file,
@@ -58,7 +62,7 @@ const processPackage = async (package) => {
   const outputFile = path.resolve(iconDir, 'index.js');
   const output = out.join('\n');
   fs.writeFileSync(outputFile, output, 'utf8');
-  return slim(packExportTemplate, package);
+  return slim(PACK_EXPORT_TEMPLATE, package);
 }
 
 (async () => {

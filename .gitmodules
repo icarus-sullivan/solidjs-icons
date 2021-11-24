@@ -1,0 +1,54 @@
+[submodule "modules/ant-design-icons"]
+	path = modules/ant-design
+	url = https://github.com/ant-design/ant-design-icons
+[submodule "modules/Font-Awesome"]
+	path = modules/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "modules/typicons.font"]
+	path = modules/typeicons
+	url = https://github.com/stephenhutchings/typicons.font.git
+[submodule "modules/octicons"]
+	path = modules/github-oct
+	url = https://github.com/primer/octicons.git
+[submodule "modules/game-icons-inverted"]
+	path = modules/game-icons
+	url = https://github.com/delacannon/game-icons-inverted.git
+[submodule "modules/devicons"]
+	path = modules/device
+	url = https://github.com/vorillaz/devicons.git
+[submodule "modules/vscode-codicons"]
+	path = modules/vscode
+	url = https://github.com/microsoft/vscode-codicons.git
+[submodule "modules/css.gg"]
+	path = modules/cssgo
+	url = https://github.com/astrit/css.gg.git
+[submodule "modules/boxicons"]
+	path = modules/box
+	url = https://github.com/atisawd/boxicons.git
+[submodule "modules/IcoMoon-Free"]
+	path = modules/icomoon
+	url = https://github.com/Keyamoon/IcoMoon-Free.git
+[submodule "modules/ionicons"]
+	path = modules/ion
+	url = https://github.com/ionic-team/ionicons.git
+[submodule "modules/weather-icons"]
+	path = modules/weather
+	url = https://github.com/erikflowers/weather-icons.git
+[submodule "modules/icons"]
+	path = modules/bootstrap
+	url = https://github.com/twbs/icons
+[submodule "modules/feather"]
+	path = modules/feather
+	url = https://github.com/feathericons/feather
+[submodule "modules/simple-icons"]
+	path = modules/simple
+	url = https://github.com/simple-icons/simple-icons
+[submodule "modules/material-design-icons"]
+	path = modules/material-design
+	url = https://github.com/google/material-design-icons
+[submodule "modules/RemixIcon"]
+	path = modules/remix
+	url = https://github.com/Remix-Design/RemixIcon
+[submodule "modules/heroicons"]
+	path = modules/hero
+	url = https://github.com/tailwindlabs/heroicons
