@@ -1,13 +1,36 @@
 const fs = require('fs');
+const slim = require('@teleology/slim');
 const orderby = require('lodash.orderby');
 
-const base = fs.readFileSync('readme_template.md', 'utf8');
+const README_TEMPLATE = `# Installation
+\`\`\`
+yarn add solidjs-icons
+\`\`\`
+
+# Usage
+Packs are split into separate paths. 
+
+\`\`\`
+import { FiX } from 'solidjs-icons/fi';
+\`\`\`
+
+# Packs
+
+| Name   | Path   | License |
+|--------|--------|---------|
+{{icons}}`;
+
 const { packages } = require('../manifest');
 
 const replacement = orderby(packages, ['name']).map(
-  ({ id, name, license }) => `| ${[name, id, license].join(' | ')} |`,
+  ({ id, url, name, license }) => {
+    const link = `[${name}](${url})`;
+    return `| ${[link, id, license].join(' | ')} |`;
+  },
 );
 
-const out = base.replace('{{}}', replacement.join('\n'));
+const out = slim(README_TEMPLATE, {
+  icons: replacement.join('\n')
+});
 
 fs.writeFileSync('README.md', out, 'utf8');
