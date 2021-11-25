@@ -1,6 +1,6 @@
-import { lazy } from 'solid-js';
+import { lazy, createSignal, createEffect } from 'solid-js';
 import { render, For } from 'solid-js/web';
-import { Router, Route, Link, useRoutes } from 'solid-app-router';
+import { Router, Route, Link, useRoutes, useLocation } from 'solid-app-router';
 
 import { packages } from '../../manifest';
 
@@ -86,20 +86,28 @@ const routes = [
 ];
 
 function App() {
+  const [origin, setOrigin] = createSignal(window.location.origin);
   const Routes = useRoutes(routes);
+  const loc = useLocation();
+
+
+
   return (
     <div>
       <div class='aside'>
         <ul>
-          <Link href={`/`}>
+          <Link href={`/home`}>
             <li>Home</li>
           </Link>
           <For each={packages}>
-            {(pack: Package) => (
-              <Link href={`/${pack.id}`}>
-              <li>{pack.name}</li>
-              </Link>
-            )}
+            {(pack: Package) => {
+              const path = `/${pack.id}`;
+              return (
+                <Link href={path}>
+                  <li active={loc.pathname.endsWith(path)}>{pack.name}</li>
+                </Link>
+              );
+            }}
           </For>
         </ul>
       </div>
