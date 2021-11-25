@@ -1,0 +1,18 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+th, td {
+  text-align: start;
+  padding: 0.5em 1em;
+}
+
+pre {
+  padding-bottom: 2em;
+}
+
+code {
+  padding: 1em;
+  background-color: #ddd;
+  color: black;
+}

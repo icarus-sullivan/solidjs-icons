@@ -23,14 +23,37 @@ module.exports = {
       ]
     },
     {
-      id: 'fa',
-      name: 'Font Awesome',
-      url: 'https://fontawesome.com/',
-      license: 'CC BY 4.0 License',
-      license_url: 'https://creativecommons.org/licenses/by/4.0/',
+      id: 'bs',
+      name: 'Bootstrap Icons',
       files: [
-        'modules/font-awesome/svgs/regular/*.svg'
-      ]
+        {
+          pattern: 'modules/bootstrap/icons/*!(-reverse)-fill.svg',
+          formatter: ({ name }) => `Fill${name}`,
+        },
+        {
+          pattern: 'modules/bootstrap/icons/*-reverse!(-fill).svg',
+          formatter: ({ name }) => `Reverse${name}`,
+        },
+        {
+          pattern:
+            'node_modules/bootstrap/icons/*!(-fill|-reverse|reverse-).svg',
+        },
+      ],
+      url: 'https://github.com/twbs/icons',
+      license: 'MIT',
+      license_url: 'https://opensource.org/licenses/MIT',
+    },
+    {
+      id: 'bx',
+      name: 'BoxIcons',
+      files: [
+        {
+          pattern: 'modules/box/svg/regular/*.svg',
+          formatter: ({ name }) => name.replace('bx', ''),
+        },
+      ],
+      url: 'https://github.com/atisawd/boxicons',
+      license: 'CC BY 4.0 License',
     },
     {
       id: 'di',
@@ -39,6 +62,25 @@ module.exports = {
       license: 'MIT',
       license_url: 'https://opensource.org/licenses/mit-license.html',
       files: ['modules/device/!SVG/*.svg'],
+    },
+    {
+      id: 'fa',
+      name: 'Font Awesome Icons',
+      url: 'https://fontawesome.com/',
+      license: 'CC BY 4.0 License',
+      license_url: 'https://creativecommons.org/licenses/by/4.0/',
+      files: [
+        'modules/font-awesome/svgs/regular/*.svg'
+      ]
+    },
+    {
+      id: 'fi',
+      name: 'Feather Icons',
+      url: 'https://feathericons.com/',
+      license: 'MIT',
+      license_url:
+        'https://github.com/feathericons/feather/blob/master/LICENSE',
+      files: ['modules/feather/icons/*.svg'],
     },
     {
       id: 'gi',
@@ -62,42 +104,33 @@ module.exports = {
       ],
     },
     {
+      id: 'hi',
+      name: 'Hero Icons',
+      url: 'https://github.com/tailwindlabs/heroicons',
+      license: 'MIT',
+      license_url: 'https://github.com/tailwindlabs/heroicons/blob/master/LICENSE',
+      files: ['modules/hero/optimized/solid/*.svg'],
+    },
+    {
+      id: 'im',
+      name: 'IcoMoon Icons',
+      files: [
+        {
+          pattern: 'modules/icomoon/SVG/*.svg',
+          formatter: ({ name }) => name.slice(3),
+        },
+      ],
+      url: 'https://github.com/Keyamoon/IcoMoon-Free',
+      license: 'CC BY 4.0 License',
+      license_url: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+    {
       id: 'io',
       name: 'Ionicons 5',
       files: ['modules/ion/src/svg/*.svg'],
       url: 'https://github.com/ionic-team/ionicons',
       license: 'MIT',
       license_url: 'https://github.com/ionic-team/ionicons/blob/master/LICENSE',
-    },
-    {
-      id: 'bs',
-      name: 'Bootstrap Icons',
-      files: [
-        {
-          pattern: 'modules/bootstrap/icons/*!(-reverse)-fill.svg',
-          formatter: ({ name }) => `Fill${name}`,
-        },
-        {
-          pattern: 'modules/bootstrap/icons/*-reverse!(-fill).svg',
-          formatter: ({ name }) => `Reverse${name}`,
-        },
-        {
-          pattern:
-            'node_modules/bootstrap/icons/*!(-fill|-reverse|reverse-).svg',
-        },
-      ],
-      url: 'https://github.com/twbs/icons',
-      license: 'MIT',
-      license_url: 'https://opensource.org/licenses/MIT',
-    },
-    {
-      id: 'fi',
-      name: 'Feather',
-      url: 'https://feathericons.com/',
-      license: 'MIT',
-      license_url:
-        'https://github.com/feathericons/feather/blob/master/LICENSE',
-      files: ['modules/feather/icons/*.svg'],
     },
     {
       id: 'md',
@@ -115,14 +148,6 @@ module.exports = {
       ],
     },
     {
-      id: 'si',
-      name: 'Simple Icons',
-      files: ['modules/simple/icons/*.svg'],
-      url: 'https://simpleicons.org/',
-      license: 'CC0 1.0 Universal',
-      license_url: 'https://creativecommons.org/publicdomain/zero/1.0/',
-    },
-    {
       id: 'ri',
       name: 'Remix Icons',
       url: 'https://github.com/Remix-Design/RemixIcon',
@@ -131,25 +156,12 @@ module.exports = {
       files: ['modules/remix/icons/**/*.svg']
     },
     {
-      id: 'hi',
-      name: 'Hero Icons',
-      url: 'https://github.com/tailwindlabs/heroicons',
-      license: 'MIT',
-      license_url: 'https://github.com/tailwindlabs/heroicons/blob/master/LICENSE',
-      files: ['modules/hero/optimized/solid/*.svg'],
-    },
-    {
-      id: 'im',
-      name: 'IcoMoon',
-      files: [
-        {
-          pattern: 'modules/icomoon/SVG/*.svg',
-          formatter: ({ name }) => name.slice(3),
-        },
-      ],
-      url: 'https://github.com/Keyamoon/IcoMoon-Free',
-      license: 'CC BY 4.0 License',
-      license_url: 'https://creativecommons.org/licenses/by/4.0/',
+      id: 'si',
+      name: 'Simple Icons',
+      files: ['modules/simple/icons/*.svg'],
+      url: 'https://simpleicons.org/',
+      license: 'CC0 1.0 Universal',
+      license_url: 'https://creativecommons.org/publicdomain/zero/1.0/',
     },
     {
       id: 'ti',
@@ -158,26 +170,6 @@ module.exports = {
       license: 'CC BY 4.0 License',
       license_url: 'https://creativecommons.org/licenses/by/4.0/',
       files: ['modules/typeicons/src/svg/*.svg'],
-    },
-    {
-      id: 'bx',
-      name: 'BoxIcons',
-      files: [
-        {
-          pattern: 'modules/box/svg/regular/*.svg',
-          formatter: ({ name }) => name.replace('bx', ''),
-        },
-      ],
-      url: 'https://github.com/atisawd/boxicons',
-      license: 'CC BY 4.0 License',
-    },
-    {
-      id: 'cg',
-      name: 'css.gg',
-      files: ['modules/cssgo/icons/svg/*.svg'],
-      url: 'https://github.com/astrit/css.gg',
-      license: 'MIT',
-      license_url: 'https://opensource.org/licenses/MIT',
     },
     {
       id: 'vsc',
@@ -199,6 +191,14 @@ module.exports = {
           formatter: ({ name }) => name.replace(/wi-/i, ''),
         },
       ],
+    },
+    {
+      id: 'cg',
+      name: 'css.gg',
+      files: ['modules/cssgo/icons/svg/*.svg'],
+      url: 'https://github.com/astrit/css.gg',
+      license: 'MIT',
+      license_url: 'https://opensource.org/licenses/MIT',
     },
   ],
 };

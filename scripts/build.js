@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const slim = require('@teleology/slim');
 const cheerio = require('./cheerio');
-const pascal = require('pascalcase');
+const camelcase = require('camelcase');
 const glob = require('glob').sync;
 
 const { output, packages } = require('../manifest');
@@ -34,7 +34,7 @@ const parseFile = ({ id, file, formatter }) => {
 
   const name1 = formatter ? formatter({ name, file }) : name;
   return {
-    name: pascal(`${id}-${name1}`),
+    name: camelcase(`${id}-${name1}`, { pascalCase: true }),
     file,
   };
 }
@@ -44,10 +44,10 @@ const processPackage = async (package) => {
   for (const file of package.files) {
     let out;
     if (typeof file === 'string') {
-      out = glob(file).map((file) => parseFile({ id: package.id, file }));
+      out = glob(file, { nocase: false }).map((file) => parseFile({ id: package.id, file }));
     } else {
       const { pattern, formatter } = file;
-      out = glob(pattern).map((file) => parseFile({ id: package.id, file, formatter }));
+      out = glob(pattern, { nocase: false }).map((file) => parseFile({ id: package.id, file, formatter }));
     }
     files.push(out);
   }
