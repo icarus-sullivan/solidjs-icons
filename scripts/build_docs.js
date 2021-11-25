@@ -3,14 +3,14 @@ const slim = require('@teleology/slim');
 const orderby = require('lodash.orderby');
 
 const README_TEMPLATE = `# Installation
-\`\`\`
+\`\`\`shell
 yarn add solidjs-icons
 \`\`\`
 
 # Usage
 Packs are split into separate paths. 
 
-\`\`\`
+\`\`\`javascript
 import { FiX } from 'solidjs-icons/fi';
 \`\`\`
 

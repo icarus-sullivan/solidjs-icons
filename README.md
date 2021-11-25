@@ -1,12 +1,12 @@
 # Installation
-```
+```shell
 yarn add solidjs-icons
 ```
 
 # Usage
 Packs are split into separate paths. 
 
-```
+```javascript
 import { FiX } from 'solidjs-icons/fi';
 ```
 

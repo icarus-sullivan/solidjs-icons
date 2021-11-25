@@ -15,7 +15,7 @@ const ICON_EXPORT_TEMPLATE = `export { default as {{name}} } from './{{name}}';`
 const PACK_EXPORT_TEMPLATE = `export * from './{{id}}'`;
 
 const processIcon = ({ iconDir, name, file }) => {
-  const contents = fs.readFileSync(file);
+  const contents = fs.readFileSync(file, 'utf8');
   const { svg_attrs, svg_contents } = cheerio(contents);
 
   // santizied
@@ -54,10 +54,19 @@ const processPackage = async (package) => {
 
   const allFiles = [].concat(...files);
 
+  const names = allFiles.map((it) => it.name.toLowerCase());
+
+  const deduplicatedFiles = allFiles.map((it, i) => {
+    if (names.indexOf(it.name.toLowerCase()) !== i) {
+      it.name = `${it.name}2`;
+    }
+    return it;
+  });
+
   const iconDir = path.resolve(BUILD_DIR, package.id);
   fs.mkdirpSync(iconDir);
 
-  const out = await Promise.all(allFiles.map((it) => processIcon({ ...it, iconDir })));
+  const out = await Promise.all(deduplicatedFiles.map((it) => processIcon({ ...it, iconDir })));
   
   const outputFile = path.resolve(iconDir, 'index.js');
   const output = out.join('\n');
