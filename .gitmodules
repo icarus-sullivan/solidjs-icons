@@ -1,54 +1,72 @@
 [submodule "modules/ant-design-icons"]
 	path = modules/ant-design
 	url = https://github.com/ant-design/ant-design-icons
+	ignore = all
 [submodule "modules/Font-Awesome"]
 	path = modules/font-awesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
+	ignore = all
 [submodule "modules/typicons.font"]
 	path = modules/typeicons
 	url = https://github.com/stephenhutchings/typicons.font.git
+	ignore = all
 [submodule "modules/octicons"]
 	path = modules/github-oct
 	url = https://github.com/primer/octicons.git
+	ignore = all
 [submodule "modules/game-icons-inverted"]
 	path = modules/game-icons
 	url = https://github.com/delacannon/game-icons-inverted.git
+	ignore = all
 [submodule "modules/devicons"]
 	path = modules/device
 	url = https://github.com/vorillaz/devicons.git
+	ignore = all
 [submodule "modules/vscode-codicons"]
 	path = modules/vscode
 	url = https://github.com/microsoft/vscode-codicons.git
+	ignore = all
 [submodule "modules/css.gg"]
 	path = modules/cssgo
 	url = https://github.com/astrit/css.gg.git
+	ignore = all
 [submodule "modules/boxicons"]
 	path = modules/box
 	url = https://github.com/atisawd/boxicons.git
+	ignore = all
 [submodule "modules/IcoMoon-Free"]
 	path = modules/icomoon
 	url = https://github.com/Keyamoon/IcoMoon-Free.git
+	ignore = all
 [submodule "modules/ionicons"]
 	path = modules/ion
 	url = https://github.com/ionic-team/ionicons.git
+	ignore = all
 [submodule "modules/weather-icons"]
 	path = modules/weather
 	url = https://github.com/erikflowers/weather-icons.git
+	ignore = all
 [submodule "modules/icons"]
 	path = modules/bootstrap
 	url = https://github.com/twbs/icons
+	ignore = all
 [submodule "modules/feather"]
 	path = modules/feather
 	url = https://github.com/feathericons/feather
+	ignore = all
 [submodule "modules/simple-icons"]
 	path = modules/simple
 	url = https://github.com/simple-icons/simple-icons
+	ignore = all
 [submodule "modules/material-design-icons"]
 	path = modules/material-design
 	url = https://github.com/google/material-design-icons
+	ignore = all
 [submodule "modules/RemixIcon"]
 	path = modules/remix
 	url = https://github.com/Remix-Design/RemixIcon
+	ignore = all
 [submodule "modules/heroicons"]
 	path = modules/hero
 	url = https://github.com/tailwindlabs/heroicons
+	ignore = all
