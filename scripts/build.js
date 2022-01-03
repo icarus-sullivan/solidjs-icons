@@ -10,7 +10,7 @@ const { output, packages } = require('../manifest');
 const BUILD_DIR = path.resolve(process.cwd(), output);
 const ICON_TEMPLATE = `import { mergeProps } from "solid-js";
 
-export default (props) => (<svg {...mergeProps(props)} {{svg_attrs}}>{{svg_contents}}</svg>)`;
+export default function {{name}} (props) { return (<svg {...mergeProps(props)} {{svg_attrs}}>{{svg_contents}}</svg>); }`;
 const ICON_EXPORT_TEMPLATE = `export { default as {{name}} } from './{{name}}';`;
 const PACK_EXPORT_TEMPLATE = `export * from './{{id}}'`;
 
@@ -22,7 +22,7 @@ const processIcon = ({ iconDir, name, file }) => {
   const uncomment = svg_contents.replace(/<\!--.*?-->/gm, '')
 
   const outputFile = path.resolve(iconDir, `${name}.js`);
-  const output = slim(ICON_TEMPLATE, { svg_attrs, svg_contents: uncomment });
+  const output = slim(ICON_TEMPLATE, { name, svg_attrs, svg_contents: uncomment });
 
   fs.writeFileSync(outputFile, output, 'utf8');
 

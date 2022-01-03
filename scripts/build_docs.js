@@ -2,19 +2,23 @@ const fs = require('fs');
 const slim = require('@teleology/slim');
 const orderby = require('lodash.orderby');
 
-const README_TEMPLATE = `# Installation
+const README_TEMPLATE = `# solidjs-icons
+A slim wrapper around numerous populare svg icons.
+View the [catalogue](https://icarus-sullivan.github.io/solidjs-icons/)
+
+## Installation
 \`\`\`shell
 yarn add solidjs-icons
 \`\`\`
 
-# Usage
+## Usage
 Packs are split into separate paths. 
 
 \`\`\`javascript
 import { FiX } from 'solidjs-icons/fi';
 \`\`\`
 
-# Packs
+## Packs
 
 | Name   | Path   | License |
 |--------|--------|---------|
